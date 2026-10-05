@@ -1,0 +1,9 @@
+section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.conference-grid {
+  display: grid;
+  gap: 16px;
+}

@@ -1,2 +1,6 @@
-{{conf().name}} - {{conf().date}} - {{conf().location}}
-
+<article>
+  <h3>{{ conf().name }}</h3>
+  <p>Date : {{ conf().date }}</p>
+  <p>Lieu : {{ conf().location }}</p>
+  <button type="button" (click)="inc()">Sélectionner</button>
+</article>

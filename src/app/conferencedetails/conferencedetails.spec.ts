@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { Conferencedetails } from './conferencedetails';
 
 describe('Conferencedetails', () => {
@@ -8,12 +7,17 @@ describe('Conferencedetails', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Conferencedetails],
+      imports: [Conferencedetails]
     }).compileComponents();
 
     fixture = TestBed.createComponent(Conferencedetails);
+    fixture.componentRef.setInput('conf', {
+      name: 'Conference Test',
+      date: '2026-10-06',
+      location: 'Tunis'
+    });
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {

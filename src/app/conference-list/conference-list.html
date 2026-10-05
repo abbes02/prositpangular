@@ -1,5 +1,13 @@
-@for (c of conferences; track $index) {
-    <app-conferencedetails [conf]="c"></app-conferencedetails>
-    
-    
+<section>
+  <h2>Liste des conférences</h2>
+  <p>Nombre de sélections : {{ totalSelections }}</p>
+
+  <div class="conference-grid">
+    @for (c of conferences; track c.name) {
+      <app-conferencedetails
+        [conf]="c"
+        (increment)="incrementTotal()">
+      </app-conferencedetails>
     }
+  </div>
+</section>

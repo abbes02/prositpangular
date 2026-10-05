@@ -1,0 +1,27 @@
+header {
+  min-height: 90px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ec6e87;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a.active {
+  text-decoration: underline;
+}

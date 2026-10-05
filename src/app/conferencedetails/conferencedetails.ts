@@ -4,12 +4,13 @@ import { Component, input, output } from '@angular/core';
   selector: 'app-conferencedetails',
   imports: [],
   templateUrl: './conferencedetails.html',
-  styleUrl: './conferencedetails.css',
+  styleUrl: './conferencedetails.css'
 })
 export class Conferencedetails {
-  conf = input<any>() 
-  increment = output()
-  inc(){
-    this.increment.emit()
+  conf = input.required<{ name: string; date: string; location: string }>();
+  increment = output<void>();
+
+  inc() {
+    this.increment.emit();
   }
 }

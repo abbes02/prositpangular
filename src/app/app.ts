@@ -1,17 +1,12 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Home } from './home/home';
 import { Footer } from './footer/footer';
 import { Header } from './header/header';
-import { Conferencedetails } from './conferencedetails/conferencedetails';
-import { ConferenceList } from './conference-list/conference-list';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Home, Footer,ConferenceList, Conferencedetails],
+  imports: [RouterOutlet, Header, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('ssa4');
-}
+export class App {}
